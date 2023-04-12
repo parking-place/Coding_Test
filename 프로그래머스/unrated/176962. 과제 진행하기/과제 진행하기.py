@@ -20,7 +20,7 @@ def doing_homework(plans, debug_mode = False):
             break
         
         debug_line = []
-        debug_line.append(f'\n시간: {min_to_hhmm(time)} -> ')
+        debug_line.append(f'시간: {min_to_hhmm(time)} -> ')
         
         #과제 종료 시간이 되면 완료된 과제에 추가
         if proceeding != []:
