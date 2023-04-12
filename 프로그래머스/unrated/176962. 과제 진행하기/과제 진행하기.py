@@ -9,17 +9,10 @@ def min_to_hhmm(minutes):
     mm = minutes % 60
     return f'{hh:02d}:{mm:02d}'
 
-def doing_homework(plans):
+def doing_homework(plans, debug_mode = False):
     # 가장 빠른 시작 시간
     time = hhmm_to_minutes(plans[0][1])
-    ## print(plans[0][1], time)
-    proceeding = []
-    completed = []
-    stopped = []
-    
-    
-    
-    ## proceeding.append(plans.pop(0))
+    proceeding ,completed, stopped = [], [], []
     
     while True:
         # 멈춘 과제, 진행중인 과제, 계획된 과제가 모두 없으면 종료
@@ -27,7 +20,6 @@ def doing_homework(plans):
             break
         
         debug_line = []
-        
         debug_line.append(f'\n시간: {min_to_hhmm(time)} -> ')
         
         #과제 종료 시간이 되면 완료된 과제에 추가
@@ -56,23 +48,22 @@ def doing_homework(plans):
         time += 1
         # 진행중인 과제의 남은 시간 감소
         if proceeding != []:
-            ## print(f'({proceeding[0][0]}: {proceeding[0][2]}분 남음)', end=' ')
             proceeding[0][2] = int(proceeding[0][2]) - 1
         
-        # if len(debug_line) > 1:
-        #      print(*debug_line)
-            
+        if len(debug_line) > 1 and debug_mode:
+            print(*debug_line)
             
     return completed
         
 
-def solution(plans):
+def solution(plans, debug_mode = False):
     answer = []
     # 시작 시간이 빠른 순서대로 정렬
     plans.sort(key=lambda x: x[1])
     
-    complete = doing_homework(plans)
+    complete = doing_homework(plans, debug_mode)
     
+    # 과제 이름만 추출
     answer = [ v[0] for v in complete ]
     
     return answer
