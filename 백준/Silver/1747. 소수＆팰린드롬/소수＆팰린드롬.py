@@ -106,7 +106,9 @@ eratosthenes_shecker(1003001)
 result = 2
 
 # 입력받은 수
+# num = int(input('수를 입력하세요 : ')) <- 이렇게 하면 백준에서는 오류가 남
 num = int(input())
+
 
 i = num
 # n부터 올라가며 소수인경우 팰린드롬인지 확인
