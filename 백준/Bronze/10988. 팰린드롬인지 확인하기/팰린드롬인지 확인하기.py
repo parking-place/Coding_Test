@@ -9,12 +9,10 @@ def is_palindrome(s : str) -> 0 or 1 :
         0 or 1: 팰린드롬이면 1, 아니면 0
     """
     result = 1
-
-    # 문자열의 절반만 반복
-    for i in range(len(s)//2) :
-        if s[i] != s[len(s)-i-1] :    # 앞뒤로 비교
-            result = 0
-            break
+    
+    # str[]을 이용해 더 짧고 가독성이 좋게 가능
+    if s != s[::-1]:
+        result = 0
 
     return result
 
