@@ -1,4 +1,14 @@
-# 2주차
+# 스터디 N주차
+</br>
+ (MM.DD)
+
+ N주차 스터디 자료입니다.
+-
+
+</br></br>
+
+## 목차
+
 
 [문제준비](Question.ipynb)/[문제풀이](Question_pre.ipynb)
 -
