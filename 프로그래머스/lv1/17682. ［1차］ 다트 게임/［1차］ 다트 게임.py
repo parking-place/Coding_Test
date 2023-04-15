@@ -15,17 +15,14 @@ def total_scoring(darts):
         score = int(darts[i][0])
         bonus = darts[i][1]
         option = darts[i][2]
-
+        
         # 옵션 변수 초기화
+        is_star = False
+        is_sharp = False
         if option == '*':
             is_star = True
-            is_sharp = False
         elif option == '#':
-            is_star = False
             is_sharp = True
-        else:
-            is_star = False
-            is_sharp = False
         
         # 보너스 점수 계산
         score = bonus_scoring(score, bonus)
