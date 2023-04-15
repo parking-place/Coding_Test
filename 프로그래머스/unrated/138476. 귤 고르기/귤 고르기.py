@@ -12,13 +12,9 @@ def solution(k, tangerine):
         except:
             t_d[t] = 1
     
-    # print(t_d)
-    
     # 귤 크기를 기준으로, 내림차순으로 정렬
     t_d = dict(sorted(t_d.items(), key=lambda x: x[1], reverse=True))
-    
-    # print(t_d)
-    
+
     # 귤을 양이 많은 크기부터 상자에 담기
     for v in t_d.values():
         # 상자에 귤을 담을 수 없는 경우, break
