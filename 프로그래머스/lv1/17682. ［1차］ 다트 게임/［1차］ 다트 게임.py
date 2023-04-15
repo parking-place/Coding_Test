@@ -32,16 +32,12 @@ def total_scoring(darts):
         
         # 옵션 점수 계산
         score = option_scoring(score, is_star, is_pre_star, is_sharp)
-
-        # print(score, is_star, is_pre_star, is_sharp)
-        # print(score, end=' ')
         
         # 총점 계산
         total_score += score
         
         # 이전 스타상 여부 저장
         is_pre_star = is_star
-        
     return total_score
 
 # 보너스 점수 계산
@@ -65,8 +61,6 @@ def option_scoring(score, is_star, is_pre_star, is_sharp):
     return score * is_sharp * (2 ** stars)
 
 def solution(dartResult):
-    answer = 0
-    
     # 점수, 보너스, 옵션 문자열을 추출하는 정규식
     # 각 점수, 보너스, 옵션은 하위 그룹으로 추출
     dart_p = re.compile(r'(\d+)([SDT])([*#]?)')
@@ -74,8 +68,4 @@ def solution(dartResult):
     # 점수, 보너스, 옵션 문자열을 리스트에 저장
     darts = dart_p.findall(dartResult)
     
-    # print(darts)
-    
-    answer = total_scoring(darts)
-    
-    return answer
+    return total_scoring(darts)
