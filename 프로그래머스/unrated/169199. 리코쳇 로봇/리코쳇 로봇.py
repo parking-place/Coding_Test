@@ -36,6 +36,7 @@ def go_ny(x,y):
         y -= 1
     return x, y
 
+# 이동 후 처리 함수
 def post_move(_x,_y,x,y) -> bool:
     global qu_l, map_l
     # 이동한 위치가 .이라면, 원래 위치 + 1을 저장
@@ -50,7 +51,8 @@ def post_move(_x,_y,x,y) -> bool:
 
 def solution(board):
     global qu_l, map_l
-    
+    # 미끄러짐 이동 함수를 리스트에 저장
+    go_funcs = [go_px, go_nx, go_py, go_ny]
     start = [0, 0]
     
     for i in range(len(board)):
@@ -79,13 +81,8 @@ def solution(board):
         
         # 현재 위치에서 네방향 미끄러짐 이동
         # 이동 후 처리는 post_move 함수에서 함
-        _p = go_px(*c_p)
-        if post_move(*_p,*c_p): return map_l[_p[0]][_p[1]]
-        _p = go_nx(*c_p)
-        if post_move(*_p,*c_p): return map_l[_p[0]][_p[1]]
-        _p = go_py(*c_p)
-        if post_move(*_p,*c_p): return map_l[_p[0]][_p[1]]
-        _p = go_ny(*c_p)
-        if post_move(*_p,*c_p): return map_l[_p[0]][_p[1]]
+        for go in go_funcs:
+            _p = go(*c_p)
+            if post_move(*_p,*c_p): return map_l[_p[0]][_p[1]]
         
     return 
