@@ -79,7 +79,9 @@ def solution(board):
         
         # 현재 위치에서 네방향 미끄러짐 이동
         # 이동 후 처리는 post_move 함수에서 함
+        # post_move 함수는 도착점에 도착하면 True를 반환 -> 해당 값(이동 횟수)을 반환
         for go in go_funcs:
             _p = go(*c_p)
             if post_move(*_p,*c_p): return map_l[_p[0]][_p[1]]
+        
     return 
