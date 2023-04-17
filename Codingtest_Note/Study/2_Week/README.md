@@ -12,7 +12,7 @@
 
 [문제준비](Question.ipynb)/[문제풀이](Question_pre.ipynb)/[관련자료-BFS](./BFS.ipynb)
 -
-    스터디 문제 준비/ 사전 풀이 입니다.
+    스터디 문제 준비/ 사전 풀이/ 관련 자료 입니다.
 
 [노션 업로드 자료](Notion_nb.ipynb)
 -
