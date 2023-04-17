@@ -62,17 +62,15 @@ def solution(board):
         if 'R' in board[i]:
             start[0] = i
             start[1] = board[i].index('R')
-    
+            
+    # 맵을 전역변수에 저장
     map_l = board
-    
     # 현재 위치를 큐에 저장
     qu_l.append(start)
     # 현재 위치를 방문했다고 표시
     map_l[start[0]][start[1]] = 0
 
     while True:
-        # print(*map_l, sep='\n')
-        # print(qu_l)
         # 큐가 비어있지만 도착점에 도착하지 못했다면, -1을 반환
         if len(qu_l) == 0: return -1
 
@@ -84,5 +82,4 @@ def solution(board):
         for go in go_funcs:
             _p = go(*c_p)
             if post_move(*_p,*c_p): return map_l[_p[0]][_p[1]]
-        
     return 
