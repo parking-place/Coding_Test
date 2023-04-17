@@ -28,12 +28,6 @@ def doing_homework(plans, debug_mode = False):
                 debug_line.append(f'과제 {proceeding[0][0]} 완료 ')
                 completed.append(proceeding.pop(0))
                 
-        # 진행중인 과제가 없을 경우 멈춘 과제가 있으면 진행중인 과제로 추가
-        if proceeding == []:
-            if stopped != []:
-                debug_line.append(f'과제 {stopped[-1][0]} 재시작 {stopped[-1][2]}분 남음 ')
-                proceeding.append(stopped.pop(-1))
-        
         # 과제 시작 시간이 되면 진행중인 과제에 추가
         if plans != []:
             if time == hhmm_to_minutes(plans[0][1]):
@@ -43,6 +37,12 @@ def doing_homework(plans, debug_mode = False):
                     stopped.append(proceeding.pop(0))
                 debug_line.append(f'과제 {plans[0][0]} 시작 {plans[0][2]}분 남음 ')
                 proceeding.append(plans.pop(0))
+                
+        # 진행중인 과제가 없을 경우 멈춘 과제가 있으면 진행중인 과제로 추가
+        if proceeding == []:
+            if stopped != []:
+                debug_line.append(f'과제 {stopped[-1][0]} 재시작 {stopped[-1][2]}분 남음 ')
+                proceeding.append(stopped.pop(-1))
         
         # 시간 증가
         time += 1
