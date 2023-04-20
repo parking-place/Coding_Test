@@ -83,10 +83,7 @@ def get_mv_sum(name, default_drr='r'):
         # 더 짧은 간선을 다시 돌아가는 것이 더 빠르기 때문.
         # 더 짧은 간선이 0이라면, 값의 변화가 없음
     total_length = l_side_length + r_side_length + min(l_side_length, r_side_length)
-    
-    # # 전체 길이와 비교
-    # total_length = min(total_length, len(name)-1)
-    
+
     # 한방향으로만 돌때의 길이를 구함
     del_l_A = len(re.sub(r'^A+', '', name))
     del_r_A = len(re.sub(r'A+$', '', name))-1
@@ -108,8 +105,7 @@ def solution(name):
     # 기본 이동방향이 오른쪽인지 왼쪽인지에 따라 가끔 오류가 발생할 수 있음
     # 둘 모두 구해주고, 더 작은 값을 반환
     mv_sum = min(get_mv_sum(name), get_mv_sum(name, 'l'))
-    
-    # print(f'al_sum : {al_sum}, mv_sum : {mv_sum}')
+
     # 커서이동횟수 + 알파벳이동횟수
     answer = al_sum + mv_sum
     return answer
