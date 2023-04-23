@@ -7,6 +7,7 @@ def dfs_w_or_l(p, w_or_l : str):
     global players, n_
     # 승리(혹은 패배)한 선수들의 리스트
     wl_l = list(players[p][w_or_l])
+    
     # 승리(혹은 패배)한 선수들이 없으면 빈 집합 반환
     if wl_l == []:
         return set()
@@ -37,7 +38,8 @@ def solution(n, results):
     global players, n_
     n_ = n
     # 선수 번호를 키로 하는 딕셔너리 생성
-    # 값은 다른 선수 번호들과의 승패 여부 딕셔너리
+    # 값은 다른 선수 번호들과의 승패 여부 집합, 결정 가능 여부, 방문 여부 딕셔너리
+    # 집합으로 만든 이유는 중복된 선수 번호를 저장하지 않기 위함
     players = { k : {'win' : set(), 'lose' : set() , 'is_decision' : False, 'is_visit':{'win':False, 'lose':False}} for k in range(1, n+1)}
     
     # 승패 결과를 딕셔너리에 저장
