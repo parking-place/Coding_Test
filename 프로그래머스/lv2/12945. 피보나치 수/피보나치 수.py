@@ -16,9 +16,7 @@ def fibonacci(n) :
     return result
 
 def solution(n):
-    # 3부터 n-1까지 피보나치 수를 구함
-    for i in range(3, n):
-        fibonacci(i)
-    # n번째 피보나치 수를 구함
-    answer = fibonacci(n)
+    # 3부터 n까지 피보나치 수를 구함
+    for i in range(3, n+1):
+        answer = fibonacci(i)
     return answer % 1234567
