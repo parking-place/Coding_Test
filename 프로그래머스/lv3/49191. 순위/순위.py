@@ -15,10 +15,6 @@ def dfs_w_or_l(p, w_or_l : str):
     if players[p]['is_visit'][w_or_l]:
         return players[p][w_or_l]
     
-    # 결정 가능 상태 업데이트
-    if n_ == len(players[p]['win']) + len(players[p]['lose']) + 1:
-        players[p]['is_decision'] = True
-        
     # 플레이어가 순위를 매길 수 있는 상태이면 승리(혹은 패배)한 선수들을 반환
     if players[p]['is_decision'] == True:
         return players[p][w_or_l]
