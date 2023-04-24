@@ -7,26 +7,29 @@
 
 ## 목차
 
-[001 ~ 004](export%20problem_001~004.ipynb)
+[001 ~ 004](export%20problem_001~004.ipynb) - <b>완료</b>
 -
     스택과 큐를 활용한 문제입니다.
 
-[005 ~ 007](export%20problem_005~007.ipynb)
+[005 ~ 007](export%20problem_005~007.ipynb) - <b>완료</b>
 -
     재귀를 이용한 문제입니다.
 
-[008 ~ 010](export%20problem_008~010.ipynb) 
+[008 ~ 010](export%20problem_008~010.ipynb) - <b>완료</b>
 -
-    트리를 이용한 문제입니다. 
+    트리를 이용한 문제입니다.
 
-[011 ~ 013](export%20problem_011~013.ipynb) 
+[011 ~ 013](export%20problem_011~013.ipynb) - <b>완료</b>
 -
     완전탐색/이분탐색(이진탐색)을 이용한 문제입니다. 
-<b>현재 푸는중</b>
 
-[014 ~ 016](export%20problem_014~016.ipynb) 
+[014 ~ 016](export%20problem_014~016.ipynb) - <b>진행중</b> 
 -
     BFS/DFS(너비우선/깊이우선 탐색)을 이용한 문제입니다. 
+
+[017 ~ 019](export%20problem_017~019.ipynb) - <b>완료</b>
+-
+    진법변환/ 비트연산을 이용한 문제입니다. 
 
 
 <br>[<상위폴더로 이동하기](..)
