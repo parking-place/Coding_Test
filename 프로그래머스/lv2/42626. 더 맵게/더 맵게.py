@@ -11,8 +11,6 @@ def solution(scoville, K):
         # 스코빌 지수가 낮은 음식을 가져옴
         h_scv = heapq.heappop(qu)
         n_scv = heapq.heappop(qu)
-        # print(h_scv, n_scv)
-        # print(qu.queue)
         # 스코빌 지수가 낮은 음식이 K보다 크거나 같으면 종료
         if h_scv >= K: break
         # 스코빌 지수를 계산후 큐에 넣음(우선순위 큐이므로 자동으로 정렬됨)
