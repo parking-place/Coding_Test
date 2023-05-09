@@ -16,11 +16,11 @@
 
 ## 목차
 
-[001](./challenge_001.ipynb)
+[001. 행렬과 연산](./challenge_001.ipynb)
 -
-    행렬과 연산(프로그래머스 Lv.4)
+    프로그래머스 Lv.4
 
-[002](./challenge_002.ipynb)
+[002. ](./challenge_002.ipynb)
 -
     설명
 
