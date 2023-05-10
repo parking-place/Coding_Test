@@ -9,9 +9,9 @@
 -
     프로그래머스 (lv.4)
 
-[002 ](challenge_002.ipynb)
+[002 사칙연산](challenge_002.ipynb)
 -
-    설명
+    프로그래머스 (lv5)
 
 [003 ](challenge_003.ipynb)
 -
