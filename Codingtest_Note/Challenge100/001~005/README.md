@@ -13,9 +13,9 @@
 -
     프로그래머스 (lv5)
 
-[003 ](challenge_003.ipynb)
+[003 별 찍기 - 10 (시에르핀스키 사각형)](challenge_003.ipynb)
 -
-    설명
+    골드 5
 
 [004 ](challenge_004.ipynb)
 -
