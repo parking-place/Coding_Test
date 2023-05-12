@@ -17,12 +17,12 @@
 -
     골드 5
 
-[004 ](challenge_004.ipynb)
+[004 칸토어 집합](challenge_004.ipynb)
 -
-    설명
+    실버 3
 
-[005 ](challenge_005.ipynb)
+[005 하노이의 탑 이동 순서](challenge_005.ipynb)
 -
-    설명
+    실버 1
 
 <br>[<상위폴더로 이동하기](../)
