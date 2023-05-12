@@ -1,4 +1,3 @@
-
 # 이미 방문했던 좌표에 다시 방문할 경구 -> 방이 생긴다.
 # 단, 한번 지나갔던 경로를 통해 재방문 하할 경우 방이 생기지 않는다.
 def solution(arrows):
@@ -45,5 +44,4 @@ def solution(arrows):
                 # 왔던 길이라면 아무것도 하지 않는다.
             # 현재 좌표를 새로운 좌표로 바꾼다.
             point = n_point
-    
     return count
