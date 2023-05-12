@@ -1,7 +1,5 @@
 from math import sqrt
-
 sier = None
-
 # 시에르핀스키 사각형을 그려주는 함수
 def make_sierpinski(start, n):
     global sier
@@ -17,28 +15,22 @@ def make_sierpinski(start, n):
     small_starts = []
     for i in range(3):
         for j in range(3):
-            small_starts.append((start[0]+(i*small_n), start[1]+(j*small_n)))
-            
-    for small_start in small_starts:
-        # 작은 사각형의 시작점이 구멍이 있어야 하는 곳이면(가운데)
-        if small_start == (start[0]+small_n, start[1]+small_n):
-            # 해당 사각형은 건너뜀
-            continue
-        # 작은 사각형의 시작점이 가운데가 아니면
-        else:
-            # 작은사각형에 대해 *을 채워줌
-            make_sierpinski(small_start, small_n)
+            # 작은 사각형의 시작점이 구멍이 있어야 하는 곳이면(가운데)
+            if (i,j) == (1,1):
+                # 해당 사각형은 건너뜀
+                continue
+            # 작은 사각형의 시작점이 가운데가 아니면
+            else:
+                # 작은 사각형의 시작점을 찾고
+                small_start = (start[0]+(i*small_n), start[1]+(j*small_n))
+                # 작은사각형에 대해 *을 채워줌
+                make_sierpinski(small_start, small_n)
     return
 
-
-
 n = int(input())
-
 sier = [[ ' ' for _ in range(n)] for _ in range(n)]
-    
 start = (0,0)
-make_sierpinski((0,0),n)
-
+make_sierpinski(start,n)
 for i in range(n):
     for j in range(n):
         print(sier[i][j], end='')
