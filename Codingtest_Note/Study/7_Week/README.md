@@ -1,8 +1,8 @@
 # 스터디 N주차
 </br>
- (MM.DD)
+ (05.23)
 
- N주차 스터디 자료입니다.
+ 7주차 스터디 자료입니다.
 -
 
 </br></br>
@@ -10,12 +10,12 @@
 ## 목차
 
 
-[문제준비](Question.ipynb)/[문제풀이](Question_pre.ipynb)
+[7주차 숙제](https://github.com/parking-place/Web_Crawling_proj/blob/main/weather.ipynb)
 -
-    스터디 문제 준비/ 사전 풀이 입니다.
-
-[2주차 숙제](Study_hw.ipynb)
--
-    이번주차에 풀어온 문제입니다.
+    7주차 숙제입니다.
+    
+    날씨 데이터 크롤링.
+    데이터프레임으로 변환.
+    matplotlib 시각화를 진행했습니다.
 
 <br>[<상위폴더로 이동하기](..)
